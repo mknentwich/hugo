@@ -1,0 +1,3 @@
+[submodule "themes/panna-cotta"]
+	path = themes/panna-cotta
+	url = https://github.com/mknentwich/panna-cotta.git

@@ -1,7 +1,7 @@
 baseURL: https://nentwich-verlag.at/
 languageCode: de-at
 title: Nentwich Verlag
-theme: hugo-fresh
+theme: panna-cotta
 
 params:
   navbarlogo:
