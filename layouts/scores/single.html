@@ -1,0 +1,92 @@
+{{- define "main" }}
+<section class="section is-medium">
+    <div class="container content">
+        <div class="columns">
+            <div class="column is-centered-tablet-portrait is-half">
+                <h1 class="title section-title">{{ .Title }}</h1>
+                <h5 class="subtitle is-5 is-muted">Marsch</h5>
+                <div class="divider mb-60"></div>
+                <table>
+                    <tr>
+                        <td>Schwierigkeit</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Preis</td>
+                        <td>49 €</td>
+                    </tr>
+                </table>
+                <div>
+                <audio controls  controlsList="nodownload" style="height: 60px">
+                    <source type="audio/ogg" src="https://upload.wikimedia.org/score/1/7/17kxj8x6g1rlzla1p0mzcy57qdkzxzy/17kxj8x6.ogg">
+                </audio>
+                </div>
+            </div>
+            <div class="column is-centered-tablet-portrait is-half is-centered">
+                <div class="has-text-centered mb-20">
+                    <span class="is-centered is-vcentered">
+                        <a class="button secondary-btn rounded" id="pageLeft">
+                            <span class="icon">
+                                <i class="fas fa-arrow-left"></i>
+                            </span>
+                        </a>
+                        <span style="margin: 0 1rem">Seite <span id="currentPage"></span> von <span id="numPages"></span></span>
+                        <a class="button secondary-btn rounded" id="pageRight">
+                            <span class="icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </a>
+                    </span>
+                </div>
+                <div class="has-text-centered">
+                <canvas width="500" height="600" id="scoreView"
+                        class="feature-card is-bordered has-text-centered revealOnScroll delay-1 animated fadeInLeft is-centered"
+                        style="height:unset;width: unset"></canvas></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
+                <script>
+                    var currentPage = 1;
+                    var pdfI;
+                    document.getElementById('pageLeft').onclick = function () {
+                        if (currentPage > 1) {
+                            currentPage--;
+                            pageRender();
+                        }
+                    };
+                    document.getElementById('pageRight').onclick = function () {
+                        if (currentPage < pdfI.numPages) {
+                            currentPage++;
+                            pageRender();
+                        }
+                    };
+
+                    function pageRender() {
+                        pdfI.getPage(currentPage).then(function (page) {
+                            var canvas = document.getElementById('scoreView');
+                            var viewport = page.getViewport(canvas.width / page.getViewport(1.0).width);
+                            var context = canvas.getContext('2d');
+                            canvas.height = viewport.height;
+                            var renderContext = {
+                                canvasContext: context,
+                                viewport: viewport
+                            };
+                            page.render(renderContext);
+                            document.getElementById('currentPage').innerText = currentPage;
+                            document.getElementById('numPages').innerText = pdfI.numPages;
+                        });
+                    }
+
+                    var loadingTask = pdfjsLib.getDocument('https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf');
+                    loadingTask.promise.then(function (pdf) {
+                        pdfI = pdf;
+                        pageRender();
+                    });
+
+                </script>
+
+            </div>
+        </div>
+    {{ .Content }}
+    </div>
+</section>
+<b>{{ .Params.id }}</b>
+{{- end }}
