@@ -1,0 +1,100 @@
+{{- define "main"}}
+        {{ $data := .Site.Data}}
+<section class="section is-medium">
+    <div class="container content">
+        <h1 class="title section-title">{{ .Title }}</h1>
+        <div class="divider mb-60"></div>
+    {{ .Content }}
+        <div class="columns is-multiline">
+            {{ range .Pages }}
+            <div class="column is-centered-tablet-portrait">
+                <div class="has-text-centered">
+                    <canvas width="160" height="200" id="scoreView"
+                            class="feature-card is-bordered has-text-centered is-centered"
+                            style="height:unset;width: unset"></canvas>
+                </div>
+                {{ $sc := (index .) }}
+                <div class="is-centered is-centered-tablet-portrait">
+                    <ul style="list-style: none; display:inline-block">
+                    <li class="is-bold" style="white-space: nowrap"><b>Arnheim Marsch</b></li>
+                    <li>Schwierigkeit: 3</li>
+                    <li>Preis: EUR 39.99,-</li>
+                    </ul>
+                </div>
+            </div>
+            {{ end }}
+            <div class="column is-centered-tablet-portrait">
+                <div class="has-text-centered">
+                    <canvas width="160" height="200" id="scoreView"
+                            class="feature-card is-bordered has-text-centered is-centered"
+                            style="height:unset;width: unset"></canvas>
+                </div>
+            </div>
+
+            <div class="column is-centered-tablet-portrait">
+                <div class="has-text-centered">
+                    <canvas width="160" height="200" id="scoreView"
+                            class="feature-card is-bordered has-text-centered is-centered"
+                            style="height:unset;width: unset"></canvas>
+                </div>
+            </div>
+
+            <div class="column is-centered-tablet-portrait">
+                <div class="has-text-centered">
+                    <canvas width="160" height="200" id="scoreView"
+                            class="feature-card is-bordered has-text-centered is-centered"
+                            style="height:unset;width: unset"></canvas>
+                </div>
+            </div>
+
+            <div class="column is-centered-tablet-portrait">
+                <div class="has-text-centered">
+                    <canvas width="160" height="200" id="scoreView"
+                            class="feature-card is-bordered has-text-centered is-centered"
+                            style="height:unset;width: unset"></canvas>
+                </div>
+            </div>
+
+            <div class="column is-centered-tablet-portrait">
+                <div class="has-text-centered">
+                    <canvas width="160" height="200" id="scoreView"
+                            class="feature-card is-bordered has-text-centered is-centered"
+                            style="height:unset;width: unset"></canvas>
+                </div>
+            </div>
+
+            <div class="column is-centered-tablet-portrait">
+                <div class="has-text-centered">
+                    <canvas width="160" height="200" id="scoreView"
+                            class="feature-card is-bordered has-text-centered is-centered"
+                            style="height:unset;width: unset"></canvas>
+                </div>
+            </div>
+
+            <div class="column is-centered-tablet-portrait">
+                <div class="has-text-centered">
+                    <canvas width="160" height="200" id="scoreView"
+                            class="feature-card is-bordered has-text-centered is-centered"
+                            style="height:unset;width: unset"></canvas>
+                </div>
+            </div>
+
+            <div class="column is-centered-tablet-portrait">
+                <div class="has-text-centered">
+                    <canvas width="160" height="200" id="scoreView"
+                            class="feature-card is-bordered has-text-centered is-centered"
+                            style="height:unset;width: unset"></canvas>
+                </div>
+            </div>
+
+            <div class="column is-centered-tablet-portrait">
+                <div class="has-text-centered">
+                    <canvas width="160" height="200" id="scoreView"
+                            class="feature-card is-bordered has-text-centered is-centered"
+                            style="height:unset;width: unset"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{- end}}
