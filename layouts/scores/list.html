@@ -21,7 +21,7 @@
 
                 <div class="is-centered is-centered-tablet-portrait">
                     <ul style="list-style: none; display:inline-block">
-                        <li class="is-bold" style="white-space: nowrap"><b>{{$sc.title}}</b></li>
+                        <li class="is-bold" style="white-space: nowrap"><a href="{{.Params.sanitizedName}}"><b>{{$sc.title}}</b></a></li>
                         <li>Schwierigkeit: {{$sc.difficulty}}</li>
                         <li>Preis: EUR {{$sc.price}},-</li>
                     </ul>
