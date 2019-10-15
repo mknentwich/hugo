@@ -1,4 +1,5 @@
 {{- define "main" }}
+{{ $score := (index .Site.Data.scores (string .Params.id) ) }}
 <section class="section is-medium">
     <div class="container content">
         <div class="columns">
@@ -8,193 +9,215 @@
                 <div class="divider mb-60"></div>
                 <table>
                     <tr>
+                        <td>Titel</td>
+                        <td>{{ $score.title }}</td>
+                    </tr>
+                    <tr>
                         <td>Schwierigkeit</td>
-                        <td>4</td>
+                        <td>{{ $score.difficulty }}</td>
                     </tr>
                     <tr>
                         <td>Preis</td>
-                        <td>49 €</td>
+                        <td>€ {{ $score.price }},-</td>
                     </tr>
                 </table>
-                <div>
-                    <audio controls controlsList="nodownload" style="height: 60px">
+                <div style="margin: 4rem 0" class="label">
+                    Hörbeispiel
+                    <audio controls controlsList="nodownload" style="height: 60px; width: 100%"
+                           title="{{$score.title}}">
                         <source type="audio/ogg"
                                 src="https://upload.wikimedia.org/score/1/7/17kxj8x6g1rlzla1p0mzcy57qdkzxzy/17kxj8x6.ogg">
                     </audio>
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal">
-                                <label class="label">Name</label>
-                            </div>
-                            <div class="field-body">
-
+                        <form method="post" action="http://127.0.0.1:9400/api/order">
+                            <input type="hidden" name="scoreId" value="{{.Params.id}}" class="input">
+                            <div class="field">
                                 <div class="field">
-                                    <p class="control">
-                                        <input type="text" name="salutation" id="salutation" placeholder="Anrede">
-                                    </p>
+                                    <label class="label">Name</label>
+                                </div>
+                                <div class="field-body">
+
+                                    <div class="field">
+                                        <p class="control">
+                                            <input type="text" name="salutation" id="salutation" placeholder="Anrede"
+                                                   class="input">
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal"></div>
-                            <div class="field-body">
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="firstName" placeholder="Vorname">
-                                    </p>
-                                </div>
+                            <div class="field">
+                                <div class="field"></div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="firstName" placeholder="Vorname" class="input">
+                                        </p>
+                                    </div>
 
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="lastName" placeholder="Nachname">
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal">
-                                <label class="label">Firma/Verein</label>
-                            </div>
-                            <div class="field-body">
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="company" placeholder="z.B. Musikverein Leopoldsdorf">
-                                    </p>
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="lastName" placeholder="Nachname" class="input">
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal">
-                                <label class="label">Kontakt</label>
-                            </div>
-                            <div class="field-body">
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="email" name="email" placeholder="Email">
-                                    </p>
+                            <div class="field">
+                                <div class="field">
+                                    <label class="label">Firma/Verein</label>
                                 </div>
-
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="telephone" placeholder="Telefonnummer">
-                                    </p>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="company"
+                                                   placeholder="z.B. Musikverein Leopoldsdorf" class="input">
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal">
-                                <label class="label">Adresse</label>
-                            </div>
-                            <div class="field-body">
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="street" placeholder="Straße">
-                                    </p>
+                            <div class="field">
+                                <div class="field">
+                                    <label class="label">Kontakt</label>
                                 </div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="email" name="email" placeholder="Email" class="input">
+                                        </p>
+                                    </div>
 
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="streetNumber" placeholder="Hausnummer">
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal"></div>
-                            <div class="field-body">
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="postCode" placeholder="Postleitzahl">
-                                    </p>
-                                </div>
-
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="city" placeholder="Ort">
-                                    </p>
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="telephone" placeholder="Telefonnummer"
+                                                   class="input">
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal"></div>
-                            <div class="field-body">
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="state" placeholder="Land">
-                                    </p>
+                            <div class="field">
+                                <div class="field">
+                                    <label class="label">Adresse</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="street" placeholder="Straße" class="input">
+                                        </p>
+                                    </div>
+
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="streetNumber" placeholder="Hausnummer"
+                                                   class="input">
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal"></div>
-                            <div class="field-body">
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <label class="checkbox">
-                                            <input type="checkbox" name="addressesEqual">Rechnungsadresse entspricht
-                                            Lieferadresse
-                                        </label>
-                                    </p>
+                            <div class="field">
+                                <div class="field"></div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="postCode" placeholder="Postleitzahl" class="input">
+                                        </p>
+                                    </div>
+
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="city" placeholder="Ort" class="input">
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal">
-                                <label class="label">Rechnungsadresse</label>
-                            </div>
-                            <div class="field-body">
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="bStreet" placeholder="Straße">
-                                    </p>
-                                </div>
-
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="bStreetNumber" placeholder="Hausnummer">
-                                    </p>
+                            <div class="field">
+                                <div class="field"></div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="state" placeholder="Land" class="input">
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal"></div>
-                            <div class="field-body">
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="bPostCode" placeholder="Postleitzahl">
-                                    </p>
-                                </div>
-
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="bCity" placeholder="Ort">
-                                    </p>
+                            <div class="field">
+                                <div class="field"></div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="addressesEqual" class=""> Rechnungsadresse
+                                                entspricht
+                                                Lieferadresse
+                                            </label>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal"></div>
-                            <div class="field-body">
-                                <div class="field is-expanded">
-                                    <p class="control">
-                                        <input type="text" name="bState" placeholder="Land">
-                                    </p>
+
+                            <div class="field">
+                                <div class="label">
+                                    <label class="label">Rechnungsadresse</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control">
+                                            <input type="text" name="bStreet" placeholder="Straße" class="input">
+                                        </p>
+                                    </div>
+
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="bStreetNumber" placeholder="Hausnummer"
+                                                   class="input">
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
+                            <div class="field">
+                                <div class="field"></div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="bPostCode" placeholder="Postleitzahl"
+                                                   class="input">
+                                        </p>
+                                    </div>
+
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="bCity" placeholder="Ort" class="input">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field"></div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <p class="control">
+                                            <input type="text" name="bState" placeholder="Land" class="input">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit" class="button is-link">Kostenpflichtig Kaufen</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -263,7 +286,7 @@
 
             </div>
         </div>
-    {{ .Content }}
+        {{ .Content }}
     </div>
 </section>
 <b>{{ .Params.id }}</b>
