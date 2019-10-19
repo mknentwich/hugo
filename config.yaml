@@ -110,33 +110,9 @@ params:
     bulmalogo: false
     quicklinks:
       column1:
-        title: "Product"
+        title: "Rechtliches"
         links:
-        - text: Discover features
-          link: /
-        - text: Why choose our product?
-          link: /
-        - text: Compare features
-          link: /
-        - text: Our roadmap
-          link: /
+        - text: Impressum
+          link: /contact
         - text: AGB
           link: /agb
-      column2:
-        title: "Docs"
-        links:
-        - text: Get started
-          link: /
-        - text: User guides
-          link: /
-        - text: Admin guide
-          link: /
-        - text: Developers
-          link: /
-      column3:
-        title: "Blog"
-        links:
-        - text: Latest news
-          link: /blog/first
-        - text: Tech articles
-          link: /blog/second
