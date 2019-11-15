@@ -1,104 +1,43 @@
 {{- define "main"}}
 {{ $scores := .Site.Data.scores }}
+{{ $categories := .Site.Data.categoriesflat }}
 {{ $id := (string .Params.id) }}
 {{ $category := (index .Site.Data.categoriesflat $id) }}
 <section class="section is-medium">
     <div class="container content">
         <h1 class="title section-title">{{ $category.name }}</h1>
         <div class="divider mb-60"></div>
-        {{ .Content }}
+    {{ .Content }}
         <div class="columns is-multiline">
-            {{ range .Pages }}
-            {{ $id := (string .Params.id )}}
-            {{ $sc := (index $scores $id ) }}
-
-            <div class="column is-centered-tablet-portrait">
-                <div class="has-text-centered">
-                    <canvas width="160" height="200" id="scoreView"
-                            class="feature-card is-bordered has-text-centered is-centered"
-                            style="height:unset;width: unset"></canvas>
-                </div>
+        {{ range .Pages }}
+        {{ $id := (string .Params.id )}}
+        {{ $sc := (index $scores $id ) }}
+        {{ $cat := (index $categories $id )}}
+            <div class="column is-centered-tablet-portrait has-text-centered">
+            {{ if eq .Kind "page" }}
+                <canvas width="160" height="200" id="scoreView"
+                        class="feature-card is-bordered has-text-centered is-centered"
+                        style="height:unset;width: unset"></canvas>
 
                 <div class="is-centered is-centered-tablet-portrait">
-                    <ul style="list-style: none; display:inline-block">
-                        <li class="is-bold" style="white-space: nowrap"><a href="{{.Params.sanitizedName}}"><b>{{$sc.title}}</b></a></li>
+                    <ul style="list-style: none; display:inline-block; margin-left: 0;">
+                        <li class="is-bold" style="white-space: nowrap"><a
+                                href="{{.Params.sanitizedName}}"><b>{{$sc.title}}</b></a></li>
                         <li>Schwierigkeit: {{$sc.difficulty}}</li>
                         <li>Preis: EUR {{$sc.price}},-</li>
                     </ul>
                 </div>
-            </div>
-            {{ end }}
-            <div class="column is-centered-tablet-portrait">
-                <div class="has-text-centered">
-                    <canvas width="160" height="200" id="scoreView"
-                            class="feature-card is-bordered has-text-centered is-centered"
-                            style="height:unset;width: unset"></canvas>
+            {{end}}
+            {{ if eq .Kind "section"}}
+                <div class="is-centered is-centered-tablet-portrait">
+                    <ul style="list-style: none; display:inline-block; margin-left: 0;">
+                        <li class="is-bold" style="white-space: nowrap"><a
+                                href="{{.Params.sanitizedName}}"><b>{{$cat.name}}</b></a></li>
+                    </ul>
                 </div>
+            {{end}}
             </div>
-
-            <div class="column is-centered-tablet-portrait">
-                <div class="has-text-centered">
-                    <canvas width="160" height="200" id="scoreView"
-                            class="feature-card is-bordered has-text-centered is-centered"
-                            style="height:unset;width: unset"></canvas>
-                </div>
-            </div>
-
-            <div class="column is-centered-tablet-portrait">
-                <div class="has-text-centered">
-                    <canvas width="160" height="200" id="scoreView"
-                            class="feature-card is-bordered has-text-centered is-centered"
-                            style="height:unset;width: unset"></canvas>
-                </div>
-            </div>
-
-            <div class="column is-centered-tablet-portrait">
-                <div class="has-text-centered">
-                    <canvas width="160" height="200" id="scoreView"
-                            class="feature-card is-bordered has-text-centered is-centered"
-                            style="height:unset;width: unset"></canvas>
-                </div>
-            </div>
-
-            <div class="column is-centered-tablet-portrait">
-                <div class="has-text-centered">
-                    <canvas width="160" height="200" id="scoreView"
-                            class="feature-card is-bordered has-text-centered is-centered"
-                            style="height:unset;width: unset"></canvas>
-                </div>
-            </div>
-
-            <div class="column is-centered-tablet-portrait">
-                <div class="has-text-centered">
-                    <canvas width="160" height="200" id="scoreView"
-                            class="feature-card is-bordered has-text-centered is-centered"
-                            style="height:unset;width: unset"></canvas>
-                </div>
-            </div>
-
-            <div class="column is-centered-tablet-portrait">
-                <div class="has-text-centered">
-                    <canvas width="160" height="200" id="scoreView"
-                            class="feature-card is-bordered has-text-centered is-centered"
-                            style="height:unset;width: unset"></canvas>
-                </div>
-            </div>
-
-            <div class="column is-centered-tablet-portrait">
-                <div class="has-text-centered">
-                    <canvas width="160" height="200" id="scoreView"
-                            class="feature-card is-bordered has-text-centered is-centered"
-                            style="height:unset;width: unset"></canvas>
-                </div>
-            </div>
-
-            <div class="column is-centered-tablet-portrait">
-                <div class="has-text-centered">
-                    <canvas width="160" height="200" id="scoreView"
-                            class="feature-card is-bordered has-text-centered is-centered"
-                            style="height:unset;width: unset"></canvas>
-                </div>
-            </div>
+        {{ end }}
         </div>
     </div>
 </section>
