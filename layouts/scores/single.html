@@ -25,13 +25,13 @@
                     Hörbeispiel
                     <audio controls controlsList="nodownload" style="height: 60px; width: 100%"
                            title="{{$score.title}}">
-                        <source type="audio/ogg"
-                                src="https://upload.wikimedia.org/score/1/7/17kxj8x6g1rlzla1p0mzcy57qdkzxzy/17kxj8x6.ogg">
+                        <source type="audio/mp3"
+                                src="{{ .Site.Params.core }}/media/audio/{{ .Params.id }}">
                     </audio>
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <form method="post" action="http://127.0.0.1:9400/api/order">
+                        <form method="post" action="{{.Site.Params.core }}/api/order">
                             <input type="hidden" name="scoreId" value="{{.Params.id}}" class="input">
                             <div class="field">
                                 <div class="field">
@@ -276,7 +276,7 @@
                         });
                     }
 
-                    var loadingTask = pdfjsLib.getDocument('https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf');
+                    var loadingTask = pdfjsLib.getDocument('{{ .Site.Params.core }}/media/pdf/{{.Params.id}}');
                     loadingTask.promise.then(function (pdf) {
                         pdfI = pdf;
                         pageRender();

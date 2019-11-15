@@ -4,6 +4,7 @@ title: Nentwich Verlag
 theme: panna-cotta
 
 params:
+  core: http://127.0.0.1:9400
   navbarlogo:
     # Logo (from static/images/logos/___)
     image: logos/nentwich.svg
