@@ -101,7 +101,7 @@
 
                             <div class="field">
                                 <div class="field">
-                                    <label class="label">Adresse</label>
+                                    <label class="label">Rechnungs- und Lieferadresse</label>
                                 </div>
                                 <div class="field-body">
                                     <div class="field is-expanded">
@@ -151,34 +151,62 @@
                                 <div class="field"></div>
                                 <div class="field-body">
                                     <div class="field is-expanded">
-                                        <p class="control">
+                                        <p class="control" onclick="toggleVisibility('sndAddress')">
                                             <label class="checkbox">
-                                                <input type="checkbox" name="addressesEqual" class=""> Rechnungsadresse
-                                                entspricht
-                                                Lieferadresse
+                                                <input type="checkbox" name="addressesEqual" class=""> Abweichende Lieferadresse
                                             </label>
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-
-                            <div class="field">
-                                <div class="label">
-                                    <label class="label">Rechnungsadresse</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <p class="control">
-                                            <input type="text" name="bStreet" placeholder="Straße" class="input">
-                                        </p>
+                            <div id="sndAddress" style="display: none">
+                                <div class="field">
+                                    <div class="label">
+                                        <label class="label">Rechnungsadresse</label>
                                     </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p class="control">
+                                                <input type="text" name="bStreet" placeholder="Straße" class="input">
+                                            </p>
+                                        </div>
 
-                                    <div class="field is-expanded">
-                                        <p class="control">
-                                            <input type="text" name="bStreetNumber" placeholder="Hausnummer"
-                                                   class="input">
-                                        </p>
+                                        <div class="field is-expanded">
+                                            <p class="control">
+                                                <input type="text" name="bStreetNumber" placeholder="Hausnummer"
+                                                       class="input">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="field"></div>
+                                    <div class="field-body">
+                                        <div class="field is-expanded">
+                                            <p class="control">
+                                                <input type="text" name="bPostCode" placeholder="Postleitzahl"
+                                                       class="input">
+                                            </p>
+                                        </div>
+
+                                        <div class="field is-expanded">
+                                            <p class="control">
+                                                <input type="text" name="bCity" placeholder="Ort" class="input">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="field"></div>
+                                    <div class="field-body">
+                                        <div class="field is-expanded">
+                                            <p class="control">
+                                                <input type="text" name="bState" placeholder="Land" class="input">
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -188,25 +216,10 @@
                                 <div class="field-body">
                                     <div class="field is-expanded">
                                         <p class="control">
-                                            <input type="text" name="bPostCode" placeholder="Postleitzahl"
-                                                   class="input">
-                                        </p>
-                                    </div>
-
-                                    <div class="field is-expanded">
-                                        <p class="control">
-                                            <input type="text" name="bCity" placeholder="Ort" class="input">
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="field">
-                                <div class="field"></div>
-                                <div class="field-body">
-                                    <div class="field is-expanded">
-                                        <p class="control">
-                                            <input type="text" name="bState" placeholder="Land" class="input">
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="" class=""> Ich habe die AGB gelesen und
+                                                bin einverstanden
+                                            </label>
                                         </p>
                                     </div>
                                 </div>
@@ -214,7 +227,7 @@
 
                             <div class="field">
                                 <div class="control">
-                                    <button type="submit" class="button is-link">Kostenpflichtig Kaufen</button>
+                                    <button type="submit" class="button is-link">Kostenpflichtig Bestellen</button>
                                 </div>
                             </div>
                         </form>
@@ -244,6 +257,16 @@
                             style="height:unset;width: unset"></canvas>
                 </div>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
+                <script>
+                    function toggleVisibility(el) {
+                        let elem = document.getElementById(el);
+                        if (getComputedStyle(elem).display === 'none') {
+                            elem.style.display = 'unset'
+                        } else {
+                            elem.style.display = 'none'
+                        }
+                    }
+                </script>
                 <script>
                     var currentPage = 1;
                     var pdfI;
