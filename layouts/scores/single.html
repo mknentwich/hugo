@@ -101,7 +101,7 @@
 
                             <div class="field">
                                 <div class="field">
-                                    <label class="label">Rechnungs- und Lieferadresse</label>
+                                    <label class="label" id="addressLabel">Rechnungs- und Lieferadresse</label>
                                 </div>
                                 <div class="field-body">
                                     <div class="field is-expanded">
@@ -151,9 +151,11 @@
                                 <div class="field"></div>
                                 <div class="field-body">
                                     <div class="field is-expanded">
-                                        <p class="control" onclick="toggleVisibility('sndAddress')">
+                                        <p class="control">
                                             <label class="checkbox">
-                                                <input type="checkbox" name="addressesEqual" class=""> Abweichende Lieferadresse
+                                                <input type="checkbox" name="addressesEqual" class=""
+                                                       oninput="toggleVisibility('sndAddress')"> Abweichende
+                                                Lieferadresse
                                             </label>
                                         </p>
                                     </div>
@@ -163,7 +165,7 @@
                             <div id="sndAddress" style="display: none">
                                 <div class="field">
                                     <div class="label">
-                                        <label class="label">Rechnungsadresse</label>
+                                        <label class="label">Lieferadresse</label>
                                     </div>
                                     <div class="field-body">
                                         <div class="field">
@@ -217,7 +219,8 @@
                                     <div class="field is-expanded">
                                         <p class="control">
                                             <label class="checkbox">
-                                                <input type="checkbox" name="" class=""> Ich habe die AGB gelesen und
+                                                <input type="checkbox" oninput="toggleAgb()" name="" class=""> Ich habe
+                                                die AGB gelesen und
                                                 bin einverstanden
                                             </label>
                                         </p>
@@ -227,7 +230,8 @@
 
                             <div class="field">
                                 <div class="control">
-                                    <button type="submit" class="button is-link">Kostenpflichtig Bestellen</button>
+                                    <button id="buyBtn" type="submit" class="button is-link">Kostenpflichtig Bestellen
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -258,13 +262,28 @@
                 </div>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
                 <script>
+                    var buyBtn = document.getElementById('buyBtn');
+                    buyBtn.setAttribute('disabled', '');
+
+                    function toggleAgb() {
+                        if (buyBtn.hasAttribute('disabled')) {
+                            buyBtn.removeAttribute('disabled')
+                        } else {
+                            buyBtn.setAttribute('disabled', '')
+                        }
+                    }
+
                     function toggleVisibility(el) {
                         let elem = document.getElementById(el);
+                        let lbl = document.getElementById('addressLabel');
                         if (getComputedStyle(elem).display === 'none') {
-                            elem.style.display = 'unset'
+                            elem.style.display = 'unset';
+                            lbl.innerText = 'Rechnungsadresse'
                         } else {
-                            elem.style.display = 'none'
+                            elem.style.display = 'none';
+                            lbl.innerText = 'Rechnungs- und Lieferadresse'
                         }
+
                     }
                 </script>
                 <script>
