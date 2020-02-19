@@ -1,0 +1,87 @@
+---
+title: AGB
+---
+
+:experimental: true
+
+== Vertragspartner
+
+Auf Grundlage dieser Allgemeinen Geschäftsbedingungen (AGB) kommt zwischen dem Kunden und
+
+Markus Nentwich - Komponist und Musiker +
+Vertreten durch: Markus Nentwich +
+Adresse: Vereinsgasse 25/14, A-1020 Wien, Österreich +
+nachfolgend "`Anbieter`" genannt, der Vertrag zustande.
+
+== Vertragsgegenstand
+
+Durch diesen Vertrag wird der Verkauf von Notenmaterial (Originalnoten) über das Shop -- System auf der Seite menu:Werke[Shop] des Anbieters geregelt. Wegen der Details des jeweiligen Angebotes wird auf die Produktbeschreibung der Angebotsseiten verwiesen.
+
+== Vertragsschluss
+
+Der Vertrag kommt ausschließlich im elektronischen Geschäftsverkehr über das Shop-System zustande. Der Bestellvorgang zum Vertragsschluss umfasst im Shop-System folgende Schritte:
+
+. Auswahl der Noten (Menüpunkt menu:Werke[Shop])
+. Einlegen der Noten in den Warenkorb
+. Betätigen des Buttons "`Zur Kasse`"
+. Eingabe der Rechnungs- und Lieferadresse
+. Auswahl des Standorts (Inland, EU-Ausland, Nicht-EU-Land)
+. Betätigen des Buttons "`KOSTENPFLICHTIG BESTELLEN`"
+. Automatisches Bestätigungsmail, dass die Bestellung eingegangen ist. Mit der Zusendung der Bestellbestätigung kommt der Vertrag zustande.
+
+== Preise, Versandkosten, Rücksendekosten
+
+Alle Preise sind Endpreise und enthalten die gesetzliche Umsatzsteuer.
+Pro Bestellung fallen einmalig folgende Versandkostenpauschalen an: Österreich (Inland): 3,00 € / EU-Ausland: 7,00 € / Nicht-EU-Land: höher.
+Bei Teillieferungen fällt die Pauschale jeweils nur einmal an. Ab einem Bestellwert von brutto 99,00 € fallen keine Versandkosten an.
+
+== Zahlungs- und Lieferbedingungen
+
+Der Kunde hat ausschließlich folgende Möglichkeit zur Zahlung: Rechnung bei Lieferung (mit beigelegtem Zahlschein).
+Weitere Zahlungsarten werden nicht angeboten und werden zurückgewiesen.
+Der Kunde ist verpflichtet, innerhalb von 14 Tagen nach Erhalt der Bestellung den ausgewiesenen Betrag ohne Abzug auf das auf der Rechnung angegebene Konto zu überweisen.
+Bei Zahlungsverzug erhält der Kunde eine Mahnung und es werden die üblichen Mahnspesen und Verzugszinsen draufgeschlagen.
+Gegebenenfalls (z.B. bei hohen Bestellbeträgen) behält sich Markus Nentwich eine Zahlung per Vorauskasse vor.
+
+Die Ware wird schnellstmöglich nach Eingang der Bestellung versandt.
+Die Regellieferzeit beträgt ca. 3 -- 7 Werktage.
+Der Anbieter versendet die Bestellung aus eigenem Lager.
+Da die Bestellungen ausschließlich vom eigenen Team bearbeitet werden, kann es unter Umständen zu Lieferverzögerungen kommen (z.B. im Krankheitsfall, wenn Markus Nentwich gerade für längere Zeit auf Tour oder auf Urlaub ist, etc...).
+Sollte diese Verzögerung länger als eine Woche in Anspruch nehmen, erhalten Sie eine zusätzliche Information per E-Mail.
+
+== Widerrufsrecht
+
+Ein Widerruf der bestellten Noten ist ausgeschlossen.
+Originalnoten werden aufgrund des Kopierschutzes weder zurückgenommen, noch umgetauscht.
+
+== Eigentumsvorbehalt
+
+Bis zur vollständigen Bezahlung bleibt die gelieferte Ware Eigentum von Markus Nentwich.
+Sie haben die Ware bis dahin pfleglich zu behandeln und Schäden unverzüglich anzuzeigen.
+Bei Zahlungsverzug ist Markus Nentwich berechtigt, vom Vertrag zurückzutreten und die Ware zurückzuverlangen.
+Die Kosten der Rücksendung im Verzugsfall (nach Ablauf der Widerrufsfrist) gehen zu Ihren Lasten und müssen erstattet werden, wenn Sie sie nicht selbst getragen haben.
+
+== Datenschutz
+
+Für Markus Nentwich ist es sehr wichtig, Sie zufrieden zu stellen und Ihre Privatsphäre zu schützen.
+Wir speichern nur alle für die Ausführung der Bestellung notwendigen Informationen.
+Da Sie grundsätzlich auf offene Rechnung bestellen, müssen Sie also keine sensiblen Zahlungsinformationen über das Internet übermitteln.
+Markus Nentwich gibt Ihre persönlichen Daten selbstverständlich nicht an Dritte weiter.
+
+Bitte beachten Sie auch die Datenschutzerklärung.
+
+== Haftung
+
+Diese Website wurde mit größtmöglicher Sorgfalt zusammengestellt.
+Trotzdem kann keine Gewähr für die Fehlerfreiheit und Genauigkeit der enthaltenen Informationen übernommen werden.
+Jegliche Haftung für Schäden, die direkt oder indirekt aus der Benutzung dieser Website entstehen, wird ausgeschlossen, soweit diese nicht auf Vorsatz oder grober Fahrlässigkeit beruhen.
+
+Sofern von dieser Website auf Internetseiten verwiesen wird, die von Dritten betreiben werden, übernimmt Markus Nentwich keine Verantwortung für deren Inhalte.
+
+== Gerichtsstand
+
+Es gilt österreichisches Recht.
+Für Streitigkeiten mit Verbrauchern gilt der gesetzliche Gerichtsstand, soweit diese einen allgemeinen Gerichtsstand in Österreich haben.
+Im übrigen ist bei Streitigkeiten mit Verbrauchern, die keinen allgemeinen Gerichtsstand in Österreich haben, der Gerichtsstand der Sitz des Anbieters.
+Bei Streitigkeiten aus Rechtsgeschäften mit Kaufleuten, juristischen Personen des öffentlichen Rechts oder öffentlich-rechtlichen Sondervermögen gilt ebenfalls der Sitz des Anbieters als Gerichtsstand.
+
