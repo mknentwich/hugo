@@ -294,8 +294,8 @@
                         let dstreetnum = document.getElementById("dStreetNumber");
                         let dpost = document.getElementById("dPostCode");
                         let dcity = document.getElementById("dCity");
-                        let dstate = document.getElementById("dStreet");
-                        if (getComputedStyle(elem).display === 'dState') {
+                        let dstate = document.getElementById("dState");
+                        if (getComputedStyle(elem).display === 'none') {
                             elem.style.display = 'unset';
                             lbl.innerText = 'Rechnungsadresse';
                             dstreet.required = true;
