@@ -1,10 +1,42 @@
 baseURL: https://nentwich-verlag.at/
 languageCode: de-at
-title: Nentwich Verlag
+title: Markus Nentwich
 theme: panna-cotta
 
 params:
   core: http://127.0.0.1:9400
+  meta:
+    title: Markus Nentwich
+    description: Webshop für Noten und persönliche Infos über Markus Nentwich.
+    keywords:
+      - Markus Nentwich
+      - Eine letzte Runde
+      - Viera Blech
+      - Polka
+      - Musik
+      - Blasmusik
+      - Noten
+      - Posaune
+      - Webshop
+    language: Deutsch
+    topics:
+      - Webshop
+      - Noten
+      - Musik
+      - Person
+      - Branche Produk
+      - Private Homepage
+    audience:
+      - Musiker
+      - Musikverein
+    revisit: 5
+    robots: INDEX,FOLLOW
+    authors:
+      - Richard Stöckl
+      - Dennis Toth
+    publishers:
+      - Richard Stöckl
+      - Dennis Toth
   navbarlogo:
     # Logo (from static/images/logos/___)
     image: logos/nentwich.svg
