@@ -53,13 +53,15 @@
                                 <div class="field-body">
                                     <div class="field is-expanded">
                                         <p class="control">
-                                            <input type="text" name="firstName" placeholder="Vorname" class="input">
+                                            <input type="text" name="firstName" placeholder="Vorname" class="input"
+                                                   required>
                                         </p>
                                     </div>
 
                                     <div class="field is-expanded">
                                         <p class="control">
-                                            <input type="text" name="lastName" placeholder="Nachname" class="input">
+                                            <input type="text" name="lastName" placeholder="Nachname" class="input"
+                                                   required>
                                         </p>
                                     </div>
                                 </div>
@@ -86,14 +88,14 @@
                                 <div class="field-body">
                                     <div class="field is-expanded">
                                         <p class="control">
-                                            <input type="email" name="email" placeholder="Email" class="input">
+                                            <input type="email" name="email" placeholder="Email" class="input" required>
                                         </p>
                                     </div>
 
                                     <div class="field is-expanded">
                                         <p class="control">
                                             <input type="text" name="telephone" placeholder="Telefonnummer"
-                                                   class="input">
+                                                   class="input" required>
                                         </p>
                                     </div>
                                 </div>
@@ -106,14 +108,15 @@
                                 <div class="field-body">
                                     <div class="field is-expanded">
                                         <p class="control">
-                                            <input type="text" name="street" placeholder="Straße" class="input" maxlength="30">
+                                            <input type="text" name="street" placeholder="Straße" class="input"
+                                                   maxlength="30" required>
                                         </p>
                                     </div>
 
                                     <div class="field is-expanded">
                                         <p class="control">
                                             <input type="text" name="streetNumber" placeholder="Hausnummer"
-                                                   class="input">
+                                                   class="input" required>
                                         </p>
                                     </div>
                                 </div>
@@ -124,13 +127,15 @@
                                 <div class="field-body">
                                     <div class="field is-expanded">
                                         <p class="control">
-                                            <input type="text" name="postCode" placeholder="Postleitzahl" class="input">
+                                            <input type="text" name="postCode" placeholder="Postleitzahl" class="input"
+                                                   required>
                                         </p>
                                     </div>
 
                                     <div class="field is-expanded">
                                         <p class="control">
-                                            <input type="text" name="city" placeholder="Ort" class="input" maxlength="30">
+                                            <input type="text" name="city" placeholder="Ort" class="input"
+                                                   maxlength="30" required>
                                         </p>
                                     </div>
                                 </div>
@@ -141,7 +146,72 @@
                                 <div class="field-body">
                                     <div class="field is-expanded">
                                         <p class="control">
-                                            <input type="text" name="state" placeholder="Land" class="input">
+                                            <select id="state" name="state" required autocomplete="off">
+                                                <option value="" disabled selected>Bitte ein Land auswählen</option>
+                                                <option value="Österreich">Österreich</option>
+                                                <option value="Deutschland">Deutschland</option>
+                                                <option value="Schweiz">Schweiz</option>
+                                                <optgroup label="B">
+                                                    <option value="Belgien">Belgien</option>
+                                                    <option value="Bulgarien">Bulgarien</option>
+                                                </optgroup>
+                                                <optgroup label="D">
+                                                    <option value="Dänemark">Dänemark</option>
+                                                </optgroup>
+                                                <optgroup label="E">
+                                                    <option value="Estland">Estland</option>
+                                                </optgroup>
+                                                <optgroup label="F">
+                                                    <option value="Finnland">Finnland</option>
+                                                    <option value="Frankreich">Frankreich</option>
+                                                </optgroup>
+                                                <optgroup label="G">
+                                                    <option value="Griechenland">Griechenland</option>
+                                                    <option value="Großbritannien">Großbritannien</option>
+                                                </optgroup>
+                                                <optgroup label="I">
+                                                    <option value="Irland">Irland</option>
+                                                    <option value="Italien">Italien</option>
+                                                </optgroup>
+                                                <optgroup label="K">
+                                                    <option value="Kroatien">Kroatien</option>
+                                                </optgroup>
+                                                <optgroup label="L">
+                                                    <option value="Lettland">Lettland</option>
+                                                    <option value="Liechtenstein">Liechtenstein</option>
+                                                    <option value="Litauen">Litauen</option>
+                                                    <option value="Luxemburg">Luxemburg</option>
+                                                </optgroup>
+                                                <optgroup label="M">
+                                                    <option value="Malta">Malta</option>
+                                                </optgroup>
+                                                <optgroup label="N">
+                                                    <option value="Niederlande">Niederlande</option>
+                                                    <option value="Norwegen">Norwegen</option>
+                                                </optgroup>
+                                                <optgroup label="P">
+                                                    <option value="Polen">Polen</option>
+                                                    <option value="Portugal">Portugal</option>
+                                                </optgroup>
+                                                <optgroup label="R">
+                                                    <option value="Rumänien">Rumänien</option>
+                                                </optgroup>
+                                                <optgroup label="S">
+                                                    <option value="Schweden">Schweden</option>
+                                                    <option value="Slowakei">Slowakei</option>
+                                                    <option value="Slowenien">Slowenien</option>
+                                                    <option value="Spanien">Spanien</option>
+                                                </optgroup>
+                                                <optgroup label="T">
+                                                    <option value="Tschechien">Tschechien</option>
+                                                </optgroup>
+                                                <optgroup label="U">
+                                                    <option value="Ungarn">Ungarn</option>
+                                                </optgroup>
+                                                <optgroup label="Z">
+                                                    <option value="Zypern">Zypern</option>
+                                                </optgroup>
+                                            </select>
                                         </p>
                                     </div>
                                 </div>
@@ -170,32 +240,17 @@
                                     <div class="field-body">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="dStreet" placeholder="Straße" class="input" maxlength="30">
+                                                <input type="text" name="dStreet" id="dStreet" placeholder="Straße"
+                                                       class="input" maxlength="30"
+                                                       autocomplete="off">
                                             </p>
                                         </div>
 
                                         <div class="field is-expanded">
                                             <p class="control">
-                                                <input type="text" name="dStreetNumber" placeholder="Hausnummer"
-                                                       class="input">
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="field">
-                                    <div class="field"></div>
-                                    <div class="field-body">
-                                        <div class="field is-expanded">
-                                            <p class="control">
-                                                <input type="text" name="dPostCode" placeholder="Postleitzahl"
-                                                       class="input">
-                                            </p>
-                                        </div>
-
-                                        <div class="field is-expanded">
-                                            <p class="control">
-                                                <input type="text" name="dCity" placeholder="Ort" class="input" maxlength="30">
+                                                <input type="text" name="dStreetNumber" id="dStreetNumber"
+                                                       placeholder="Hausnummer"
+                                                       class="input" autocomplete="off">
                                             </p>
                                         </div>
                                     </div>
@@ -206,7 +261,93 @@
                                     <div class="field-body">
                                         <div class="field is-expanded">
                                             <p class="control">
-                                                <input type="text" name="dState" placeholder="Land" class="input">
+                                                <input type="text" name="dPostCode" id="dPostCode"
+                                                       placeholder="Postleitzahl"
+                                                       class="input" autocomplete="off">
+                                            </p>
+                                        </div>
+
+                                        <div class="field is-expanded">
+                                            <p class="control">
+                                                <input type="text" name="dCity" id="dCity" placeholder="Ort"
+                                                       class="input" maxlength="30"
+                                                       autocomplete="off">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="field"></div>
+                                    <div class="field-body">
+                                        <div class="field is-expanded">
+                                            <p class="control">
+                                                <select id="dState" name="dState" autocomplete="off">
+                                                    <option value="" disabled selected>Bitte ein Land auswählen</option>
+                                                    <option value="Österreich">Österreich</option>
+                                                    <option value="Deutschland">Deutschland</option>
+                                                    <option value="Schweiz">Schweiz</option>
+                                                    <optgroup label="B">
+                                                        <option value="Belgien">Belgien</option>
+                                                        <option value="Bulgarien">Bulgarien</option>
+                                                    </optgroup>
+                                                    <optgroup label="D">
+                                                        <option value="Dänemark">Dänemark</option>
+                                                    </optgroup>
+                                                    <optgroup label="E">
+                                                        <option value="Estland">Estland</option>
+                                                    </optgroup>
+                                                    <optgroup label="F">
+                                                        <option value="Finnland">Finnland</option>
+                                                        <option value="Frankreich">Frankreich</option>
+                                                    </optgroup>
+                                                    <optgroup label="G">
+                                                        <option value="Griechenland">Griechenland</option>
+                                                        <option value="Großbritannien">Großbritannien</option>
+                                                    </optgroup>
+                                                    <optgroup label="I">
+                                                        <option value="Irland">Irland</option>
+                                                        <option value="Italien">Italien</option>
+                                                    </optgroup>
+                                                    <optgroup label="K">
+                                                        <option value="Kroatien">Kroatien</option>
+                                                    </optgroup>
+                                                    <optgroup label="L">
+                                                        <option value="Lettland">Lettland</option>
+                                                        <option value="Liechtenstein">Liechtenstein</option>
+                                                        <option value="Litauen">Litauen</option>
+                                                        <option value="Luxemburg">Luxemburg</option>
+                                                    </optgroup>
+                                                    <optgroup label="M">
+                                                        <option value="Malta">Malta</option>
+                                                    </optgroup>
+                                                    <optgroup label="N">
+                                                        <option value="Niederlande">Niederlande</option>
+                                                        <option value="Norwegen">Norwegen</option>
+                                                    </optgroup>
+                                                    <optgroup label="P">
+                                                        <option value="Polen">Polen</option>
+                                                        <option value="Portugal">Portugal</option>
+                                                    </optgroup>
+                                                    <optgroup label="R">
+                                                        <option value="Rumänien">Rumänien</option>
+                                                    </optgroup>
+                                                    <optgroup label="S">
+                                                        <option value="Schweden">Schweden</option>
+                                                        <option value="Slowakei">Slowakei</option>
+                                                        <option value="Slowenien">Slowenien</option>
+                                                        <option value="Spanien">Spanien</option>
+                                                    </optgroup>
+                                                    <optgroup label="T">
+                                                        <option value="Tschechien">Tschechien</option>
+                                                    </optgroup>
+                                                    <optgroup label="U">
+                                                        <option value="Ungarn">Ungarn</option>
+                                                    </optgroup>
+                                                    <optgroup label="Z">
+                                                        <option value="Zypern">Zypern</option>
+                                                    </optgroup>
+                                                </select>
                                             </p>
                                         </div>
                                     </div>
@@ -219,7 +360,9 @@
                                     <div class="field is-expanded">
                                         <p class="control">
                                             <label class="checkbox">
-                                                <input type="checkbox" oninput="toggleAgb()" name="" class="" autocomplete="off"> Ich habe
+                                                <input type="checkbox" oninput="toggleAgb()" name="" class=""
+                                                       autocomplete="off" required>
+                                                Ich habe
                                                 die AGB gelesen und
                                                 bin einverstanden
                                             </label>
@@ -276,12 +419,33 @@
                     function toggleVisibility(el) {
                         let elem = document.getElementById(el);
                         let lbl = document.getElementById('addressLabel');
+                        let dstreet = document.getElementById("dStreet");
+                        let dstreetnum = document.getElementById("dStreetNumber");
+                        let dpost = document.getElementById("dPostCode");
+                        let dcity = document.getElementById("dCity");
+                        let dstate = document.getElementById("dState");
                         if (getComputedStyle(elem).display === 'none') {
                             elem.style.display = 'unset';
-                            lbl.innerText = 'Rechnungsadresse'
+                            lbl.innerText = 'Rechnungsadresse';
+                            dstreet.required = true;
+                            dstreetnum.required = true;
+                            dpost.required = true;
+                            dcity.required = true;
+                            dstate.required = true;
+                            dstate.value = document.getElementById("state").value
                         } else {
                             elem.style.display = 'none';
-                            lbl.innerText = 'Rechnungs- und Lieferadresse'
+                            lbl.innerText = 'Rechnungs- und Lieferadresse';
+                            dstreet.required = false;
+                            dstreet.value = "";
+                            dstreetnum.required = false;
+                            dstreetnum.value = "";
+                            dpost.required = false;
+                            dpost.value = "";
+                            dcity.required = false;
+                            dcity.value = "";
+                            dstate.required = false;
+                            dstate.value = "";
                         }
 
                     }
