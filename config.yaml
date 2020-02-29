@@ -1,10 +1,10 @@
-baseURL: https://nentwich-verlag.at/
+baseURL: https://www.markus-nentwich.at/
 languageCode: de-at
 title: Markus Nentwich
 theme: panna-cotta
 
 params:
-  core: http://127.0.0.1:9400
+  core: https://core.markus-nentwich.at
   meta:
     title: Markus Nentwich
     description: Webshop für Noten und persönliche Infos über Markus Nentwich.
@@ -18,13 +18,14 @@ params:
       - Noten
       - Posaune
       - Webshop
+      - Verlag
     language: Deutsch
     topics:
       - Webshop
       - Noten
       - Musik
       - Person
-      - Branche Produk
+      - Branche Produkt
       - Private Homepage
     audience:
       - Musiker
