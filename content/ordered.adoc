@@ -3,11 +3,11 @@ title: Vielen Dank für Ihre Bestellung!
 ---
 
 
-Sie bekommen nun eine Bestellbestätigung an die von Ihnen angegebene E-Mail zugeschickt.
+Sie bekommen nun eine Bestellbestätigung an die von Ihnen angegebene E-Mail zugesendet.
 Der Auftrag wird nun so schnell als möglich bearbeitet.
-Für weitere Fragen wenden Sie sich bitte an office@markus-nentwich.at.
+Für weitere Fragen wenden Sie sich bitte an: kontakt@markus-nentwich.at
 
 Haben Sie sich schon weiter im Shop umgesehen?
-Ich bin überzeugt davon, dass Sie noch weitere meiner Werke interessieren wird!
+Ich bin davon überzeugt, dass Sie noch weitere meiner Werke interessieren wird!
 
-Wenn Sie wollen können Sie sich auch darüber informieren wer genau hinter den Kompositionen steckt: link:/about[über Markus Nentwich]
+Wenn Sie wollen können Sie sich auch darüber informieren, wer genau hinter den Kompositionen steckt: link:/about[über Markus Nentwich]
