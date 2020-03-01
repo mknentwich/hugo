@@ -1,0 +1,8 @@
+---
+title: Willkommen bei Markus Nentwich!
+layout: single
+---
+
+Ich heiße Sie herzlich auf meiner Website willkommen!
+Mein Name ist Markus Nentwich und biete verschiedene Leistungen an.
+Alle Werke, welche ich zum Verkauf anbiete können Sie unter "`Noten`" auffinden.
