@@ -5,6 +5,8 @@ theme: panna-cotta
 
 params:
   core: https://core.markus-nentwich.at
+  email: kontakt@markus-nentwich.at
+  name: Markus Nentwich
   meta:
     title: Markus Nentwich
     description: Webshop für Noten und persönliche Infos über Markus Nentwich.
@@ -70,7 +72,7 @@ params:
   - title: Noten
     data: categories
   - title: Kontakt
-    url: /
+    url: /contact
   - title: Über mich
     url: /about
   section1:
