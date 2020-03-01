@@ -2,6 +2,7 @@ baseURL: https://www.markus-nentwich.at/
 languageCode: de-at
 title: Markus Nentwich
 theme: panna-cotta
+enableRobotsTXT: true
 
 params:
   core: https://core.markus-nentwich.at

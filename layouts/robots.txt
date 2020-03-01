@@ -1,0 +1,8 @@
+User-agent: *
+
+{{range .Pages}}
+{{ if .Data.hidden }}
+Disallow: {{.RelPermalink}}
+{{ end }}
+{{end}}
+Disallow: /ordered

@@ -1,5 +1,6 @@
 ---
 title: Vielen Dank für Ihre Bestellung!
+hidden: true
 ---
 
 
