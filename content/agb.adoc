@@ -15,18 +15,17 @@ nachfolgend "`Anbieter`" genannt, der Vertrag zustande.
 
 == Vertragsgegenstand
 
-Durch diesen Vertrag wird der Verkauf von Notenmaterial (Originalnoten) über das Shop -- System auf der Seite menu:Werke[Shop] des Anbieters geregelt. Wegen der Details des jeweiligen Angebotes wird auf die Produktbeschreibung der Angebotsseiten verwiesen.
+Durch diesen Vertrag wird der Verkauf von Notenmaterial (Originalnoten) über das Shop -- System auf der Seite menu:Noten[] des Anbieters geregelt. Wegen der Details des jeweiligen Angebotes wird auf die Produktbeschreibung der Angebotsseiten verwiesen.
 
 == Vertragsschluss
 
 Der Vertrag kommt ausschließlich im elektronischen Geschäftsverkehr über das Shop-System zustande. Der Bestellvorgang zum Vertragsschluss umfasst im Shop-System folgende Schritte:
 
-. Auswahl der Noten (Menüpunkt menu:Werke[Shop])
-. Einlegen der Noten in den Warenkorb
+. Auswahl der Noten (Menüpunkt menu:Noten[])
 . Betätigen des Buttons "`Zur Kasse`"
 . Eingabe der Rechnungs- und Lieferadresse
-. Auswahl des Standorts (Inland, EU-Ausland, Nicht-EU-Land)
-. Betätigen des Buttons "`KOSTENPFLICHTIG BESTELLEN`"
+. Bestätigung der AGB
+. Betätigen des Buttons "`Kostenpflichtig Bestellen`"
 . Automatisches Bestätigungsmail, dass die Bestellung eingegangen ist. Mit der Zusendung der Bestellbestätigung kommt der Vertrag zustande.
 
 == Preise, Versandkosten, Rücksendekosten
