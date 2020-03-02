@@ -26,7 +26,7 @@
                     <audio controls controlsList="nodownload" style="height: 60px; width: 100%"
                            title="{{$score.title}}">
                         <source type="audio/mp3"
-                                src="https://{{ .Site.Params.core }}/media/score/audio/{{ .Params.id }}">
+                                src="https://{{ .Site.Params.core }}/media/score/{{ .Params.id }}/audio">
                     </audio>
                 </div>
                 <div class="card">
@@ -482,7 +482,7 @@
                         });
                     }
 
-                    var loadingTask = pdfjsLib.getDocument('https://{{ .Site.Params.core }}/media/score/pdf/{{.Params.id}}');
+                    var loadingTask = pdfjsLib.getDocument('https://{{ .Site.Params.core }}/media/score/{{.Params.id}}/pdf');
                     loadingTask.promise.then(function (pdf) {
                         pdfI = pdf;
                         pageRender();
