@@ -19,7 +19,12 @@ title: Willkommen bei Markus Nentwich!
             <p>Auch können Sie mich für Workshops, Unterricht, Auftragswerke o.a. kontaktieren.</p>
         </td>
         <td rowspan="2">
-            <img src="images/markus_portrait.jpg" alt="Porträt Markus" align="rigth">
+            <!--Fallback for all browser versions-->
+            <picture>
+                <source srcset="images/markus_portait.webp" type="image/webp" alt="Porträt Markus">
+                <source srcset="images/markus_portait.jpg" type="image/jpeg" alt="Porträt Markus">
+                <img src="images/markus_portait.jpg" alt="Porträt Markus">
+            </picture>
         </td>
     </tr>
     <tr>
