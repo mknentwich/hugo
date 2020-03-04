@@ -134,7 +134,7 @@ params:
   section5: true
   footer:
     # Logo (from /images/logos/___)
-    logo: nentwich.svg
+    logo: #nentwich.svg
     # Social media links (GitHub, Twitter, etc.). All are optional.
     socialmedia:
     - link: https://facebook.com/markus.nentwich.5
