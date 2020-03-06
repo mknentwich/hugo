@@ -22,11 +22,11 @@ Durch diesen Vertrag wird der Verkauf von Notenmaterial (Originalnoten) über da
 Der Vertrag kommt ausschließlich im elektronischen Geschäftsverkehr über das Shop-System zustande. Der Bestellvorgang zum Vertragsschluss umfasst im Shop-System folgende Schritte:
 
 . Auswahl der Noten (Menüpunkt menu:Noten[])
-. Betätigen des Buttons "`Zur Kasse`"
 . Eingabe der Rechnungs- und Lieferadresse
 . Bestätigung der AGB
 . Betätigen des Buttons "`Kostenpflichtig Bestellen`"
-. Automatisches Bestätigungsmail, dass die Bestellung eingegangen ist. Mit der Zusendung der Bestellbestätigung kommt der Vertrag zustande.
+. Eine automatisch generierte Bestätigungsmail wird an den Käufer versandt
+. Mit der Zusendung der Bestellbestätigung kommt der Vertrag zustande
 
 == Preise, Versandkosten, Rücksendekosten
 
