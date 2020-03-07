@@ -74,8 +74,8 @@ params:
     data: categories
   - title: Kontakt
     url: /contact
-  - title: Über mich
-    url: /about
+  - title: Biografie
+    url: /biografie
   section1:
     title: Great power comes
     subtitle: with great responsibility
