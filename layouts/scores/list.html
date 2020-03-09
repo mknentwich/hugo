@@ -5,16 +5,19 @@
 {{ $category := (index .Site.Data.categoriesflat $id) }}
 <section class="section is-medium">
     <div class="container content">
-        <h1 class="title section-title">{{ $category.name }}</h1>
+        <h1 class="title section-title">{{ .Title }}</h1>
         <div class="divider mb-60"></div>
-    {{ .Content }}
+        {{ .Content }}
         <div class="columns is-multiline">
-        {{ range .Pages }}
-        {{ $id := (string .Params.id )}}
-        {{ $sc := (index $scores $id ) }}
-        {{ $cat := (index $categories $id )}}
+            {{ range .Pages }}
+            {{ $id := (string .Params.id )}}
+            {{ $sc := (index $scores $id ) }}
+            {{ if eq $id 0 }}
+            {{ $sc = $scores}}
+            {{end}}
+            {{ $cat := (index $categories $id )}}
             <div class="column is-centered-tablet-portrait has-text-centered">
-            {{ if eq .Kind "page" }}
+                {{ if eq .Kind "page" }}
                 <canvas width="160" height="200" id="scoreView"
                         class="feature-card is-bordered has-text-centered is-centered"
                         style="height:unset;width: unset"></canvas>
@@ -22,22 +25,22 @@
                 <div class="is-centered is-centered-tablet-portrait">
                     <ul style="list-style: none; display:inline-block; margin-left: 0;">
                         <li class="is-bold" style="white-space: nowrap"><a
-                                href="{{.Params.sanitizedName}}"><b>{{$sc.title}}</b></a></li>
+                                href="{{.Permalink}}"><b>{{$sc.title}}</b></a></li>
                         <li>Schwierigkeit: {{$sc.difficulty}}</li>
                         <li>Preis: EUR {{$sc.price}},-</li>
                     </ul>
                 </div>
-            {{end}}
-            {{ if eq .Kind "section"}}
+                {{end}}
+                {{ if eq .Kind "section"}}
                 <div class="is-centered is-centered-tablet-portrait">
                     <ul style="list-style: none; display:inline-block; margin-left: 0;">
                         <li class="is-bold" style="white-space: nowrap"><a
                                 href="{{.Params.sanitizedName}}"><b>{{$cat.name}}</b></a></li>
                     </ul>
                 </div>
-            {{end}}
+                {{end}}
             </div>
-        {{ end }}
+            {{ end }}
         </div>
     </div>
 </section>
